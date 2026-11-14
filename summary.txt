@@ -1,0 +1,14 @@
+built: 2026-11-14T09:58:10+00:00
+sources: 157  ok: 157  dead: 0
+entries: 981907
+ips: 186288
+
+http         entries=185751   dupes=673844   sources=29/29 rejected=154
+https        entries=67142    dupes=92329    sources=24/24 rejected=33
+socks4       entries=150456   dupes=507031   sources=33/33 rejected=252
+socks5       entries=174200   dupes=738060   sources=35/35 rejected=182
+mix          entries=239604   dupes=98673    sources=18/18 rejected=204
+anonymous    entries=3453     dupes=166      sources=6/6 rejected=0
+elite        entries=13274    dupes=957      sources=7/7 rejected=0
+transparent  entries=670      dupes=34       sources=3/3 rejected=0
+no-ports     entries=147357   dupes=5291     sources=2/2 rejected=176
