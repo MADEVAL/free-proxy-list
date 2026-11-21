@@ -1,0 +1,51 @@
+name: Report wrong or dead data
+description: Report a dead proxy, a wrong entry, or a broken source
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is generated automatically. Do not open pull requests with data changes -
+        they are overwritten on the next build.
+
+        Security, privacy and takedown requests must be sent to GLOBUS.studio, see SECURITY.md.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong
+      options:
+        - Dead or unusable proxy
+        - Wrong entry (reserved range, invalid port, duplicate)
+        - Broken or dead source
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: File
+      description: Which list file is affected
+      placeholder: http.txt
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Exact line, source URL, or a short description. One item per issue, please.
+      placeholder: "1.0.0.4:80 - reserved range, appears 12 times"
+    validations:
+      required: true
+  - type: input
+    id: built
+    attributes:
+      label: Build timestamp
+      description: Value of `built:` from summary.txt, if known
+      placeholder: "2026-11-11 05:00"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that the entry is still present in the current summary.txt build
+          required: true
